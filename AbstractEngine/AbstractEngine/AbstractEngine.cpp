@@ -81,20 +81,20 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	// Declares a bullshit instance of our CubeEntity class. Supposed to replace "Hard Coded" functionality.
 	CubeUnitEntity* ourBox = new CubeUnitEntity(vec3(0.0f));
-	std::vector<GLfloat> vertexData = ourBox->getVertexData();
-	std::vector<GLfloat> colorData = ourBox->getColorData();
+	std::vector<glm::vec3> vertexData = ourBox->getVertexData();
+	std::vector<glm::vec3> colorData = ourBox->getColorData();
 	// TODO: Next Step, implement different positions for multiple cubes!
 
 
 	GLuint vertexbuffer;
 	glGenBuffers(1, &vertexbuffer);
 	glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
-	glBufferData(GL_ARRAY_BUFFER, vertexData.size() * sizeof(GLfloat), &vertexData[0], GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, vertexData.size() * sizeof(glm::vec3), &vertexData[0], GL_STATIC_DRAW);
 
 	GLuint colorbuffer;
 	glGenBuffers(1, &colorbuffer);
 	glBindBuffer(GL_ARRAY_BUFFER, colorbuffer);
-	glBufferData(GL_ARRAY_BUFFER, colorData.size() * sizeof(GLfloat), &colorData[0], GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, colorData.size() * sizeof(glm::vec3), &colorData[0], GL_STATIC_DRAW);
 
 	do{
 		// Clear the screen
@@ -139,7 +139,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		);
 
 		// Draw the triangle !
-		glDrawArrays(GL_TRIANGLES, 0, 12*3); // 12*3 indices starting at 0 -> 12 triangles
+		glDrawArrays(GL_TRIANGLES, 0, vertexData.size()); // 12*3 indices starting at 0 -> 12 triangles
 
 		glDisableVertexAttribArray(0);
 		glDisableVertexAttribArray(1);

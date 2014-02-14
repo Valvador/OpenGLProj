@@ -16,21 +16,19 @@ using namespace glm;
 
 class UnitEntity : Entity
 {
-private:
+protected:
 	vec3 position;
 	//float maxVelocity;
-	std::vector<GLfloat> g_vertex_buffer_data;
-	std::vector<GLfloat> g_color_buffer_data;
+	std::vector<glm::vec3> g_vertex_buffer_data;
+	std::vector<glm::vec3> g_color_buffer_data;
 
 public:
-	UnitEntity(vec3 startPosition, std::vector<GLfloat> vertexData, std::vector<GLfloat> colorData);
-	~UnitEntity();
-	vec3 getPosition(){return vec3(0.0f);}
+	vec3 getPosition(){return vec3(0.0f);};
 	/*
 	void setPosition(vec3 _position);
 	vec3 moveTo();
 	*/
-	std::vector<GLfloat> getVertexData();
-	std::vector<GLfloat> getColorData();
+	std::vector<glm::vec3> getVertexData();
+	std::vector<glm::vec3> getColorData();
 
 };

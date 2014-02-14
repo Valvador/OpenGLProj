@@ -83,12 +83,14 @@
     <None Include="ColorFragmentShader.fragmentshader" />
     <None Include="ReadMe.txt" />
     <None Include="Resource\glew32.dll" />
+    <None Include="TextureFragmentShader.fragmentshader" />
     <None Include="TransformVertexShader.vertexshader" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cameraCont.h" />
     <ClInclude Include="CubeUnitEntity.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="objloader.h" />
     <ClInclude Include="shader.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -98,6 +100,7 @@
     <ClCompile Include="AbstractEngine.cpp" />
     <ClCompile Include="cameraCont.cpp" />
     <ClCompile Include="CubeUnitEntity.cpp" />
+    <ClCompile Include="objloader.cpp" />
     <ClCompile Include="shader.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

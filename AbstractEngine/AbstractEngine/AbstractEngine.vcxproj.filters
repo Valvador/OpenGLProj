@@ -19,6 +19,9 @@
     <Filter Include="Simulation">
       <UniqueIdentifier>{72e9fb22-8b55-4482-997b-a28f8613e444}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Rendering">
+      <UniqueIdentifier>{66874727-73f3-4fe4-8420-b54ab580b06a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -29,6 +32,9 @@
       <Filter>shaders</Filter>
     </None>
     <None Include="ColorFragmentShader.fragmentshader">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="TextureFragmentShader.fragmentshader">
       <Filter>shaders</Filter>
     </None>
   </ItemGroup>
@@ -54,6 +60,9 @@
     <ClInclude Include="CubeUnitEntity.h">
       <Filter>Simulation</Filter>
     </ClInclude>
+    <ClInclude Include="objloader.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -73,6 +82,9 @@
     </ClCompile>
     <ClCompile Include="CubeUnitEntity.cpp">
       <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="objloader.cpp">
+      <Filter>Rendering</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

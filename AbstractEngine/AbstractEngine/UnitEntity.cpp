@@ -3,23 +3,16 @@
 
 
 
-UnitEntity::UnitEntity(vec3 startPosition, std::vector<GLfloat> vertexData, std::vector<GLfloat> colorData)
+
+
+
+std::vector<glm::vec3> UnitEntity::getVertexData()
 {
-	position = startPosition;
-	g_vertex_buffer_data = vertexData;
-	g_color_buffer_data = colorData;
+	return this->g_vertex_buffer_data;
 }
 
-UnitEntity::~UnitEntity()
+std::vector<glm::vec3> UnitEntity::getColorData()
 {
+	return this->g_color_buffer_data;
 }
 
-std::vector<GLfloat> UnitEntity::getVertexData()
-{
-	return g_vertex_buffer_data;
-}
-
-std::vector<GLfloat> UnitEntity::getColorData()
-{
-	return g_color_buffer_data;
-}
